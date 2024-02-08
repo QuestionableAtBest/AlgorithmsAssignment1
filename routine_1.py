@@ -33,8 +33,8 @@ def average(dictionary):
     for key in dictionary:
         print(f"{key}: {sum(dictionary[key])/len(dictionary[key])}")
 
-# all_times = {80:[], 90:[], 100:[],200:[], 300:[], 400:[], 500:[],800:[], 1000:[],1600:[],2000:[]}
-all_times = {80:[], 90:[], 100:[]}
+all_times = {10:[],20:[], 40:[],80:[],90:[], 100:[],160:[],200:[]}
+
 for i in all_times.keys():
     for x in range(50):
         run_time = timeit(i)
