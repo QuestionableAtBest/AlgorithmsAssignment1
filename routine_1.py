@@ -36,7 +36,7 @@ def average(dictionary):
 all_times = {10:[],20:[], 40:[],80:[],90:[], 100:[],160:[],200:[]}
 
 for i in all_times.keys():
-    for x in range(50):
+    for x in range(150):
         run_time = timeit(i)
         all_times[i].append(run_time)
 
