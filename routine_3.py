@@ -19,17 +19,18 @@ def casemaker(size):
     return [oof, oof[random.randint(1, len(oof)) - 1]]
 
 def timeit(casemaker_size):
+    case = casemaker(casemaker_size)
     start = time.perf_counter_ns()
-    fut(casemaker(casemaker_size))
+    fut(case)
     end = time.perf_counter_ns()
     #convert to milliseconds
-    return ((end - start) / 1**6)
+    return ((end - start) / 1000000)
 
 def average(dictionary):
     for key in dictionary:
         print(f"{key}: {sum(dictionary[key])/len(dictionary[key])}")
 
-all_times = {10:[],20:[], 40:[],80:[],90:[], 100:[],160:[],200:[],300:[],400:[],500:[],800:[],1000:[]}
+all_times = {10:[],20:[], 40:[],80:[],90:[], 100:[],160:[],200:[],300:[],400:[],500:[],800:[],1000:[],10000:[],20000:[],30000:[],40000:[],70000:[],80000:[],90000:[],100000:[],1000000:[],2000000:[],4000000:[],7000000:[],8000000:[],9000000:[],10000000:[]}
 for i in all_times.keys():
     for x in range(100):
         run_time = timeit(i)
